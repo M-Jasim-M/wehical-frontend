@@ -1,24 +1,29 @@
 import logo from './logo.svg';
 import './App.css';
 
+import Createaccount from './Components/Createacount/Createaccount';
+import {BrowserRouter,Route,Routes} from 'react-router-dom'
+import Login from './Components/Login/Login';
+import Dashboarda from './Components/Dashboard-admain/Dashboard-a';
+import Dashboardc from './Components/Dashboard-client/Dashboard-c';
+import ResetPasward from './Components/Resetpasward/ResetPasward';
+import Newpasward from './Components/Newpasward/Newpasward';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <>
+<BrowserRouter>
+<Routes>
+  <Route path='/' element={<Login/>}/>
+  <Route path='/createaccount' element={<Createaccount/>}/>
+  <Route path='/admain-dash' element={<Dashboarda/>}/>
+  <Route path='/client-dash' element={<Dashboardc/>}/>
+  <Route path='/resetemail' element={<ResetPasward/>}/>
+  <Route path='/newpasward' element={<Newpasward/>}/>
+</Routes>
+</BrowserRouter>
+
+  
+    </>
   );
 }
 
