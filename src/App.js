@@ -8,6 +8,8 @@ import Dashboarda from './Components/Dashboard-admain/Dashboard-a';
 import Dashboardc from './Components/Dashboard-client/Dashboard-c';
 import ResetPasward from './Components/Resetpasward/ResetPasward';
 import Newpasward from './Components/Newpasward/Newpasward';
+import Assignweh from './Components/Assignwehical/Assignweh';
+import Fueldetail from './Components/Fuelingdetail/Fueldetail';
 function App() {
   return (
     <>
@@ -19,6 +21,8 @@ function App() {
   <Route path='/client-dash' element={<Dashboardc/>}/>
   <Route path='/resetemail' element={<ResetPasward/>}/>
   <Route path='/newpasward' element={<Newpasward/>}/>
+  <Route path='/assignweh' element={<Assignweh/>}/>
+  <Route path='/fulling' element={<Fueldetail/>}/>
 </Routes>
 </BrowserRouter>
 
