@@ -20,6 +20,7 @@ function Fueldetail() {
         // Make a GET request to fetch user data based on the user ID
         const response = await axios.get(`http://localhost:5000/api/userweh/${userId}`);
         setUser(response.data);
+        console.log(response.data);
       } catch (error) {
         console.error('Error fetching user data:', error.message);
         setError('Error fetching user data');
@@ -44,6 +45,20 @@ function Fueldetail() {
               <p>Wehical Data:</p>
               <p>Vehicle Type: {user.wehical.vehicleType}</p>
               <p>Plate Number: {user.wehical.plateNumber}</p>
+            </div>
+          )}
+          {user.fuelHistory && (
+            <div>
+              <p>Fuel History:</p>
+              {user.fuelHistory.map((fuelEntry, index) => (
+                <div key={index}>
+                  <p>Station Name: {fuelEntry.stationName}</p>
+                  <p>Price Per Liter: {fuelEntry.pricePerLiter}</p>
+                  <p>Price Per Liter: {fuelEntry.date}</p>
+                  <img  src={`http://localhost:5000/uploads/${fuelEntry.image}`} alt="" />
+                  {/* Add other fuel history fields as needed */}
+                </div>
+              ))}
             </div>
           )}
         </div>

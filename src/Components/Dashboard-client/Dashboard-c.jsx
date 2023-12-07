@@ -1,9 +1,12 @@
 import React from 'react'
+import FuelingForm from '../Addfuelingde/Addfueling';
+import Fueldetail from '../Fuelingdetail/Fueldetail';
 
 function Dashboardc() {
   return (
     <>
-    this is the client dashboard
+    <FuelingForm/>
+    <Fueldetail/>
     </>
   )
 }

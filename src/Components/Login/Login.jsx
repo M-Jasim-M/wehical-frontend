@@ -29,6 +29,10 @@ const navigate = useNavigate();
 
   const { token, user } = response.data;
 
+  const khan = response.data.user._id ;
+  console.log(khan);
+  const wehicalId = user.wehical ? user.wehical._id : null; 
+  console.log("sfsdgsgweh" + wehicalId);
   // Store the token and user data in localStorage or wherever needed
   localStorage.setItem('token', token);
   localStorage.setItem('user', JSON.stringify(user));
@@ -39,6 +43,7 @@ const navigate = useNavigate();
       if (user.isAdmin === 'client') {
         alert("client login")
         navigate("/client-dash")
+        navigate(`/client-dash?userId=${khan}&wehicalId=${wehicalId}`);
       }else{
         alert("admain login")
         navigate("/admain-dash")
