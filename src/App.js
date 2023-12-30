@@ -10,6 +10,7 @@ import ResetPasward from './Components/Resetpasward/ResetPasward';
 import Newpasward from './Components/Newpasward/Newpasward';
 import Assignweh from './Components/Assignwehical/Assignweh';
 import Fueldetail from './Components/Fuelingdetail/Fueldetail';
+import FuelHistory from './Components/Fuelhistory/Fuelhistory';
 function App() {
   return (
     <>
@@ -23,6 +24,7 @@ function App() {
   <Route path='/newpasward' element={<Newpasward/>}/>
   <Route path='/assignweh' element={<Assignweh/>}/>
   <Route path='/fulling' element={<Fueldetail/>}/>
+  <Route path='/fuel' element={<FuelHistory/>}/>
 </Routes>
 </BrowserRouter>
 

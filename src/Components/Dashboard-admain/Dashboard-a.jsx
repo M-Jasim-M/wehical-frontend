@@ -3,6 +3,10 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
 import UserList from './Wehicaluser';
+import UserGraph from './Graph';
+import UserChart from './Graph';
+import HorizontalBarChart from './Graph';
+import UserRegistrationChart from './Userregistered';
 
 function Dashboard() {
   const navigate = useNavigate();
@@ -97,6 +101,10 @@ function Dashboard() {
       </div>
       <br />
       <button onClick={addUser}>Add user</button>
+<br /><br />
+<HorizontalBarChart/><br />
+<UserRegistrationChart/>
+
 <br /> <br />
 
 <UserList/>
